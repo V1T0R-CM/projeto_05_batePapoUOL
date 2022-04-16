@@ -12,6 +12,10 @@ strong{
     font-weight: bold;
 }
 
+span{
+    color: gray;
+}
+
 .janela-inicial{
     display: flex;
     flex-direction: column;
@@ -39,8 +43,14 @@ strong{
     height: 92px;
 }
 
-.nome-user{
+.login{
     margin-top: 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome-user{
     background-color: white;
     width: 261px;
     height: 54px;
@@ -68,6 +78,21 @@ strong{
     border: hidden;
     color: #696969;
     font-size: 18px;
+}
+
+.carregando{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+}
+
+.carregando img{
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
 }
 
 .barra-topo{

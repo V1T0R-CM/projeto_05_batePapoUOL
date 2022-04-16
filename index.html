@@ -12,8 +12,14 @@
 <body>
     <div class="janela-inicial">
         <img class="logo" src="./imagens/logo.png" alt="Logotipo Bate-papo UOL"/>
-        <input class="nome-user" type="text" placeholder="Digite seu nome">
-        <button class="botao-entrar" onclick="cadastraNome()">Entrar</button>
+        <div class="login">
+            <input class="nome-user" type="text" placeholder="Digite seu nome">
+            <button class="botao-entrar" onclick="cadastraNome()">Entrar</button>
+        </div>
+        <div class="carregando escondido">
+            <img src="./imagens/loading.gif" alt="Carregamento">
+            Entrando...
+        </div>
     </div>
     <div class="janela-principal escondido">
         <div class="barra-topo">
