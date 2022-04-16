@@ -5,7 +5,6 @@
 }
 
 body{
-    background-color: #f3f3f3;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -13,9 +12,62 @@ strong{
     font-weight: bold;
 }
 
-.logo{
-    width: 75px;
-    height: 53px;
+.janela-inicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: 0;;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+.janela-principal{
+    background-color: #f3f3f3;
+    padding-top: 102px;
+    padding-bottom: 106px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu.logo{
+    width: 130px;
+    height: 92px;
+}
+
+.nome-user{
+    margin-top: 94px;
+    background-color: white;
+    width: 261px;
+    height: 54px;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.nome-user::placeholder{
+    color: #AEAEAE;
+}
+
+.existente::placeholder{
+    color: red;
+}
+
+.botao-entrar{
+    margin-top: 15px;
+    width: 109px;
+    height: 45px;
+    background-color: #e7e7e7;
+    border-radius: 9px;
+    border: hidden;
+    color: #696969;
+    font-size: 18px;
 }
 
 .barra-topo{
@@ -32,6 +84,11 @@ strong{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+.barra-topo .logo{
+    width: 75px;
+    height: 53px;
+}
+
 .barra-topo ion-icon{
     font-size:35px;
 }
@@ -39,9 +96,7 @@ strong{
 .conteiner-chat{
     overflow-y: scroll;
     width: 100%;
-    height: 66%;
-    margin-top: 102px;
-    margin-bottom: 106px;
+    height: 100%;
 }
 
 .barra-inferior{
@@ -89,4 +144,8 @@ strong{
     margin-left: 27px;
     border: none;
     background-color: white;
+}
+
+.escondido{
+    display: none;
 }

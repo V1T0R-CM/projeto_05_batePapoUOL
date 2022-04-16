@@ -10,17 +10,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="barra-topo">
-        <img class="logo" src="./imagens/logo 1.png" alt="Logotipo Bate-papo UOL"/>
-        <ion-icon name="people"></ion-icon>
+    <div class="janela-inicial">
+        <img class="logo" src="./imagens/logo.png" alt="Logotipo Bate-papo UOL"/>
+        <input class="nome-user" type="text" placeholder="Digite seu nome">
+        <button class="botao-entrar" onclick="cadastraNome()">Entrar</button>
     </div>
-    <div class="conteiner-chat">
-    </div>
-    <div class="barra-inferior">
-        <input class="caixa-msg" type="text" placeholder="Escreva aqui..."/>
-        <button class="botao-enviar" onclick="enviaMsg()">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-        </button>
+    <div class="janela-principal escondido">
+        <div class="barra-topo">
+            <img class="logo" src="./imagens/logo.png" alt="Logotipo Bate-papo UOL"/>
+            <ion-icon name="people"></ion-icon>
+        </div>
+        <div class="conteiner-chat">
+        </div>
+        <div class="barra-inferior">
+            <input class="caixa-msg" type="text" placeholder="Escreva aqui..."/>
+            <button class="botao-enviar" onclick="enviaMsg()">
+                <ion-icon name="paper-plane-outline"></ion-icon>
+            </button>
+        </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

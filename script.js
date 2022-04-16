@@ -1,7 +1,18 @@
-let nomeUser=prompt("Digite o seu nome de usuário:");
+let nomeUser
 let msgs=[];
-let intervalStatus;
-let intervalChat;
+
+
+document.querySelector(".janela-inicial").addEventListener("keydown",function(e){
+    if (e.key==="Enter"){
+        cadastraNome()
+    }
+});
+
+document.querySelector(".janela-principal").addEventListener("keydown",function(e){
+    if (e.key==="Enter"){
+        enviaMsg()
+    }
+});
 
 function inicio(){
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", {name: nomeUser})
@@ -14,8 +25,10 @@ function renovaStatus(){
 }
 
 function iniciaChat(){
-    intervalStatus=setInterval(renovaStatus,5000);
-    intervalChat=setInterval(carregaChat,3000);
+    document.querySelector(".janela-inicial").classList.add("escondido")
+    document.querySelector(".janela-principal").classList.remove("escondido")
+    setInterval(renovaStatus,5000);
+    setInterval(carregaChat,3000);
 }
 function carregaChat(){
     const promise=axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
@@ -62,9 +75,16 @@ function msgParaMim(){
     return false;
 }
 
+function cadastraNome(){
+    nomeUser=document.querySelector(".nome-user").value
+    inicio()
+}
+
 function tratarErroNome(){
-    nomeUser=prompt("Digite outro nome de usuário, este já esta sendo usado:");
-    inicio();
+    const caixaNomeUser=document.querySelector(".nome-user")
+    caixaNomeUser.classList.add("existente")
+    caixaNomeUser.setAttribute("placeholder", "Nome de usuário indisponível");
+    caixaNomeUser.value=""
 }
 
 function enviaMsg(){
@@ -79,5 +99,3 @@ function enviaMsg(){
     promise.then(carregaChat);
     promise.catch(window.location.reload);
 }
-
-inicio();
