@@ -142,7 +142,7 @@ function carregaMsgs(response){
 function converteHora(hora){
     let horaAtual=Number(hora.slice(0,2))-3;
     if (horaAtual<0){
-        horaAtual+=24;
+        horaAtual+=12;
     }
     if(String(horaAtual).length<2){
         horaAtual="0"+horaAtual;
