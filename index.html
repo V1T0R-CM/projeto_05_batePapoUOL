@@ -10,24 +10,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Janela de entrada do usuário-->
     <div class="janela-inicial">
         <img class="logo" src="./imagens/logo.png" alt="Logotipo Bate-papo UOL"/>
         <div class="login">
             <input class="nome-user" type="text" placeholder="Digite seu nome">
-            <button class="botao-entrar" onclick="cadastraNome()">Entrar</button>
+            <button class="botao-entrar" onclick="inicio()">Entrar</button>
         </div>
+        <!--Mensagem de transição-->
         <div class="carregando escondido">
             <img src="./imagens/loading.gif" alt="Carregamento">
             <span>Entrando...</span>
         </div>
+        <!--Mensagem de transição-->
     </div>
+    <!--Janela de entrada do usuário-->
+    <!--Janela principal do aplicativo-->
     <div class="janela-principal escondido">
+        <!--Barra do topo-->
         <div class="barra-topo">
             <img class="logo" src="./imagens/logo.png" alt="Logotipo Bate-papo UOL"/>
             <ion-icon name="people" onclick="janelaUsers()"></ion-icon>
         </div>
+        <!--Barra do topo-->
+        <!--Espaço para o chat-->
         <div class="conteiner-chat">
         </div>
+        <!--Espaço para o chat-->
+        <!--Barra inferior-->
         <div class="barra-inferior">
             <div>
                 <input class="caixa-msg" type="text" placeholder="Escreva aqui..."/>
@@ -37,14 +47,22 @@
             </div>
             <h2>Enviando para Todos (Público)</h2>
         </div>
+        <!--Barra inferior-->
+        <!--Janela de usuário-->
         <div class="janela-users">
+            <!--Parte escura da janela-->
             <div class="tela-escura"onclick="janelaUsers()"></div>
+            <!--Parte escura da janela-->
+            <!--Parte com as opções do usuário-->
             <div class="aba-users">
+                <!--Espaço onde ficam as opções de contatos-->
                 <div class="contatos">
                     <h1>Escolha um contato para enviar mensagem:</h1>
                     <div class="lista-contatos">
                     </div>
                 </div>
+                <!--Espaço onde ficam as opções de contatos-->
+                <!--Espaço onde ficam as opções de visibilidade-->
                 <div class="visibilidade">
                     <h1>Escolha a visibilidade:</h1>
                     <div class="opcoes marcado" onclick="escolheVisibilidade(this)">
@@ -60,9 +78,13 @@
                         <ion-icon name="checkmark-sharp" class="check"></ion-icon>
                     </div>
                 </div>
+                <!--Espaço onde ficam as opções de visibilidade-->
             </div>
+            <!--Parte com as opções do usuário-->
         </div>
+        <!--Janela de usuário-->
     </div>
+    <!--Janela principal do aplicativo-->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
