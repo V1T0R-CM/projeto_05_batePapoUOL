@@ -18,21 +18,49 @@
         </div>
         <div class="carregando escondido">
             <img src="./imagens/loading.gif" alt="Carregamento">
-            Entrando...
+            <span>Entrando...</span>
         </div>
     </div>
     <div class="janela-principal escondido">
         <div class="barra-topo">
             <img class="logo" src="./imagens/logo.png" alt="Logotipo Bate-papo UOL"/>
-            <ion-icon name="people"></ion-icon>
+            <ion-icon name="people" onclick="janelaUsers()"></ion-icon>
         </div>
         <div class="conteiner-chat">
         </div>
         <div class="barra-inferior">
-            <input class="caixa-msg" type="text" placeholder="Escreva aqui..."/>
-            <button class="botao-enviar" onclick="enviaMsg()">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-            </button>
+            <div>
+                <input class="caixa-msg" type="text" placeholder="Escreva aqui..."/>
+                <button class="botao-enviar" onclick="enviaMsg()">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </button>
+            </div>
+            <h2>Enviando para Todos (Público)</h2>
+        </div>
+        <div class="janela-users">
+            <div class="tela-escura"onclick="janelaUsers()"></div>
+            <div class="aba-users">
+                <div class="contatos">
+                    <h1>Escolha um contato para enviar mensagem:</h1>
+                    <div class="lista-contatos">
+                    </div>
+                </div>
+                <div class="visibilidade">
+                    <h1>Escolha a visibilidade:</h1>
+                    <div class="opcoes marcado" onclick="escolheVisibilidade(this)">
+                        <div>
+                            <ion-icon name="lock-open"></ion-icon><span>Público</span>
+                        </div>
+                        <ion-icon name="checkmark-sharp" class="check"></ion-icon>
+                    </div>
+                    <div class="opcoes" onclick="escolheVisibilidade(this)">
+                        <div>
+                            <ion-icon name="lock-closed"></ion-icon></ion-icon><span>Reservadamente</span>
+                        </div>
+                        <ion-icon name="checkmark-sharp" class="check"></ion-icon>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

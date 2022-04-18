@@ -131,10 +131,7 @@ span{
     left: 0;
     height: 80px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 27px;
+    padding: 17px 27px;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -142,11 +139,122 @@ span{
     font-size:26px;
 }
 
+.barra-inferior div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barra-inferior h2{
+    margin-left: 2px;
+    font-size: 12px;
+    color:grey;
+}
+
+.janela-users{
+    overflow-x: hidden;
+    z-index: 1;
+    display: flex;
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: width 0.05s;
+}
+
+.tela-escura{
+    height: 100%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.aba-users{
+    height: 100%;
+    width: 70%;
+    background-color: white;
+}
+
+.aba-users h1{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+}
+
+.aba-users ion-icon{
+    font-size: 20px;
+}
+
+.aba-users>div{
+    margin-top: 30px;
+}
+
+.check{
+    color:white
+}
+
+.marcado .check{
+    color: green;
+}
+
+.visibilidade{
+    display: flex;
+    flex-direction: column;
+    padding-left: 22px;
+    padding-right: 22px;
+    align-items: center;
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    padding-left: 22px;
+    padding-right: 22px;
+    align-items: center;
+}
+
+.lista-contatos{
+    width: 100%;
+    max-height: 420px;
+    overflow-y: scroll;
+}
+
+.opcoes{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.opcoes span{
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
+.opcoes div{
+    display: flex;
+    align-items: center;
+}
+
+.mostrar{
+    width: 100%;
+}
+
 .caixa-msg{
     border: none;
     outline: none;
     height: 100%;
     width: 100%;
+}
+
+.caixa-msg::placeholder{
+    color: black;
+    font-size: 17px;
 }
 
 .mensagem{
